@@ -25,10 +25,10 @@ int rBinarySearch(FILE* b_fp, char *word, int bottom, int top)
 		{
 			if (strcmp(item.name, word) == 1)
 			{
-				return rBinarySearch(b_fp, word, bottom, top - 1);
+				return rBinarySearch(b_fp, word, bottom, middle - 1);
 			}
 			else
-				return rBinarySearch(b_fp, word, bottom + 1, top);
+				return rBinarySearch(b_fp, word, middle + 1, top);
 		}
 	}
 	return -1;
